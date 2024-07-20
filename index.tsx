@@ -35,7 +35,7 @@ export default definePlugin({
             // modify the get user profile so it modify's the user profile effect
             find: "\"UserProfileStore\"",
             replacement: {
-                match: /getUserProfile\((\w+)\){return (\w+)\[\w+\]}/,
+                match: /getUserProfile\((\i)\){return (\i)\[\i\]}/,
                 replace: "getUserProfile($1){ return $self.patchUserProfile($2[$1]) }"
             }
         }
